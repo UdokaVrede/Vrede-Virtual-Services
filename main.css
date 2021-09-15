@@ -40,6 +40,12 @@ span{
     font-size: 1.4em;
   }
 
+.header a:hover {
+background-color: #fbe8df;
+color:#1f771f;
+font-size: 1.2em;
+}
+
 .nav-header-desc{
     display: flex;
 }
@@ -332,4 +338,8 @@ footer{
         margin: 0 0;
     }
 
-}
+    .header a {
+        padding: 14px 10px 0 10px;
+        text-decoration: none;
+        font-size: 1em;
+      }
