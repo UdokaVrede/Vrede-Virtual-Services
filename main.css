@@ -39,11 +39,13 @@ span{
 
 nav{
     display: flex;
+    flex-wrap: wrap;
     position: sticky;
     top: 0;
     z-index: 1;
+    align-items: center;
     justify-content: space-between;
-    padding: .5em 4em;
+    padding: .5em 3em;
     border-bottom-style: solid;
     border-bottom-color: var(--bk-one);
     border-bottom-width: 1px;
@@ -68,6 +70,7 @@ nav{
     color: var(--dark-theme);
     font-size: 1.2em;
     border-radius: 12px;
+    padding: 10px;
 }
 
 .nav-links{
@@ -90,6 +93,18 @@ nav{
 
 .logo-desc h1{
     font-size: 1em;
+}
+
+.hamburger{
+    background-color: transparent;
+    border: 0;
+    font-size: 10px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:focus{
+    outline: none;
 }
 
 .about-me{
@@ -372,14 +387,32 @@ footer a{
 }
 
 @media only screen and (max-width: 750px){
-    nav{
+    .navul{
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navul.show{
         display: flex;
-        position: sticky;
-        top: 0;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    nav li{
+        padding-block: 5px;
     }
        
-    .logo-desc{
+    .logo-desc span{
         display: none;
+    }
+
+    .logo-desc{
+        margin: 20px 0 0 4px;
+        font-size: 1.4em;
+        text-align: center ;
     }
 
     .service-content{

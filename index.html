@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,8 +19,11 @@
                 <h1>Vrede Virtual Assistant</h1><span>Fostering Productivity in People</span>
             </div>
         </div>      
+        <button class="hamburger" id="burger">
+            <img src="/media/svg/hamburger.png" style="width:40px" alt="hamburger-icon">
+        </button>
         <div class="nav-links">
-            <ul>
+            <ul id="nav-ul" class="navul">
                 <li><a href="#home">Home</a></li>
                 <!-- <li><a href="#About">About</a></li> -->
                 <li><a href="#services">Services</a></li>
@@ -38,7 +41,7 @@
                 <div class="about-content">
                     <p>Independent Executive Virtual Assistant who works remotely to help you reach your goals and fosters a productive environment for clients</p>
                     <span>Looking to lessen your workloads????</span>
-                    <button class="get-in-touch" id="btn-flw-contact">Get in touch</button>
+                    <a href="#form-btn"><button class="get-in-touch" id="btn-flw-contact">Get in touch</button></a>
                 </div>
             </div>
         </div>
@@ -126,7 +129,7 @@
                 </div>
             </div>
             <div class="form-container">
-                <form class="survey-form" method="POST" action= "/contact.php">
+                <form class="survey-form" id="form-btn" method="POST" action= "/contact.php">
                     <div class="form-fam">
                         <label id="name-label" for="name-entry">Name</label>
                         <input id="Name" class="name" type="text" name="fullname" placeholder="Enter your name" required><br>
@@ -140,9 +143,8 @@
                     <div class="suggest">
                         <label>Message: </label>
                         <textarea name="suggestions" class="comments" id="Message" spellcheck="true" placeholder="Enter your message here..." required></textarea>
-            
-                        <button class="submit" type="submit">Submit</button>
                     </div>
+                    <a href="/contact.php"><button class="submit" type="submit">Submit</button></a>
                 </form>
             </div>
         </div>
@@ -153,5 +155,6 @@
            <a href="http://www.linkedin.com/in/udokaku-ugochukwu" target="_blank" rel="noopener noreferrer"><i>DokaCodes</i></a> &copy; 2021
     </footer>
 
+    <script src="/script.js"></script>
 </body>
 </html>
